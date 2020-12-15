@@ -27,7 +27,5 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
-          push: true
-          tags: sample:2
-          file: ./sample-app/Dockerfile
-          context: ./sample-app
+          repository: namhj94/sampleapp
+          tag_with_ref: true
