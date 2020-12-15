@@ -16,11 +16,18 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Login to Github Container Hub
+        uses: docker/lgoin-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor}}
+          password: ${{ secrets.HJ-PAT}}
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
-          username: ${{ github.actor }}
-          password: ${{ secrets.HJ_PAT }}
-          registry: ghcr.io
-          repository: namhj94/sample2
-          tag_with_ref: true
+          push: true
+          tags: ghcr.io/namhj94/${{ github.event.inputs.dir }}:${{ github.event.inputs.tag }}
+          file: ./${{ github.event.inputs.dir }}/Dockerfile
+          context: ./${{ github.event.inputs.dir }}
