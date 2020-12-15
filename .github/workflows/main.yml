@@ -28,6 +28,6 @@ jobs:
         uses: docker/build-push-action@v1
         with:
           push: true
-          tags: ghcr.io/namhj94/sample:2
+          tags: sample:2
           file: ./sample-app/Dockerfile
           context: ./sample-app
