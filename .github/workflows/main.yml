@@ -24,5 +24,3 @@ jobs:
           registry: ghcr.io
           repository: namhj94/sample2
           tag_with_ref: true
-          context: ./sample-app
-          file: ./sample-app/Dockerfile
