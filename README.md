@@ -5,12 +5,12 @@ Github Container Registry 사용과 Github Action을 통한 CI 연습
 1. Dockerfile로 이미지 빌드 
 2. CI를 위한 GithubAction pipeline 작성
 3. Github Container Registry에 자동으로 이미지 Push
-## Pipeline
+## CI/CD(Delivery) Pipeline
 ```
 code commit & push -> Build Dockerfile -> image -> Push to ghcr.io
 ```
 # Image Usage
 ### build Dockerfile
-docker build -t sample .
+docker build -t <IMAGENAME> .
 ### Run Image
-docker run --rm -d -p 3000:3000 ghcr.io/namhj94/sample
+docker run --rm -d -p HOSTPORT:CONTAINERPORT ghcr.io/namhj94/<IMAGENAME>
