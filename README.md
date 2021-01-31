@@ -1,3 +1,4 @@
+![Publish Docker image](https://github.com/namhj94/Actions-ghcr-CI-CD-Pipeline/workflows/Publish%20Docker%20image/badge.svg)
 # Github Action & Github Container Registry
 ## Description
 Github Container Registry 사용과 Github Action을 통한 CI 연습
