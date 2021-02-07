@@ -1,5 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
+# Workflow
 name: Publish Docker image
 
 # Controls when the action will run. 
