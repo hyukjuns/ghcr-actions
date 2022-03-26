@@ -12,8 +12,10 @@ code commit & push -> Build Dockerfile -> image -> Push to ghcr.io
 ```
 # Image Usage
 ### build Dockerfile
+```
 docker build -t <IMAGENAME> .
+```
 ### Run Image
+```
 docker run --rm -d -p HOSTPORT:CONTAINERPORT ghcr.io/namhj94/<IMAGENAME>
-  
-brach-test-test
+```
